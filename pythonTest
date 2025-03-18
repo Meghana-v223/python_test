@@ -1,0 +1,14 @@
+def Diamond(n):
+    for i in range(n):
+        string = ''
+        for num in range(i+1):            
+            string += ' ' +(chr(65+num))        
+        print(' '*(n-i-1)+ string)
+         
+    for i in range(n-2,-1,-1):
+        string = ''
+        for num in range(i+1):            
+            string += ' ' + (chr(65+num))
+        print(' '*(n-i-1)+ string)
+    
+print(Diamond(5))
