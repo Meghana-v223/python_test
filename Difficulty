@@ -1,0 +1,15 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+for i in range(10):
+    driver = webdriver.Chrome()
+    driver.get("https://mathup.com/games/crossbit?mode=championship")
+
+    driver.implicitly_wait(10)
+    submitButton = driver.find_element(By.XPATH, "//div[text()='Start']")
+    submitButton.click()
+
+    validate = driver.find_element(By.XPATH, "//div[text()='Easy']")
+    print("Difficulty: ",validate.text)
+
+    driver.quit()
