@@ -11,6 +11,6 @@ def Diamond(n):
             string += ' ' + (chr(65+num))
         print(' '*(n-i-1)+ string)
 print("Diamond of 5")    
-print(Diamond(5))
+Diamond(5)
 print("Diamond of 3")
-print(Diamond(3))
+Diamond(3)
